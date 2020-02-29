@@ -24,7 +24,7 @@ def UDPServer(ipAddress, portSocket, buffer=1024):
     except KeyboardInterrupt:
         pass
 
-    return decode;
+    return str(addr[0]), str(addr[1]), decode; # Sender-IP, Sender-PORT, Decode
 
 def TCPClient(ipAddress, portSocket, strMessage, buffer=1024):   
     client = socket()
