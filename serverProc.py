@@ -34,7 +34,7 @@ def TCPClient(ipAddress, portSocket, strMessage, buffer=1024):
     client.close() #Close client
     return data; #Return data
 
-def TCPServerRecieve(ipAddress, portSocket, strMessage,buffer=1024):
+def TCPServerRecieve(ipAddress, portSocket, buffer=1024):
     server = socket(AF_INET, SOCK_STREAM) #Create server socket
     server.bind((ipAddress, portSocket)) #Bind to IP and Port
     server.listen(1) #Wait for a connection
