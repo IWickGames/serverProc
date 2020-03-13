@@ -8,4 +8,5 @@ BUFFER = 1024
 #connect is the socket save. DO NOT CHANGE OR MESS WITH THAT VARIABLE
 connect, IPAddress, Message = serverProc.TCPServerRecieve(IP, PORT, BUFFER)
 #This will import the connect variable again and return strMessage to the client
+#"Test Responce can be anything you want"
 serverProc.TCPServerRespond(connect, "Test Responce")
