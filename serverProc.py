@@ -26,14 +26,6 @@ def UDPServer(ipAddress, portSocket, buffer=1024):
 
     return str(addr[0]), str(addr[1]), decode; # Sender-IP, Sender-PORT, Decode
 
-def TCPClient(ipAddress, portSocket, strMessage, buffer=1024):   
-    client = socket() #Create Socket
-    client.connect((ipAddress, portSocket)) #Connect to the Socket
-    client.send(strMessage.encode("utf-8")) #Send packet
-    data = client.recv(1024).decode("utf-8") #Capture responce packet
-    client.close() #Close client
-    return data; #Return data
-
 def TCPServerRecieve(ipAddress, portSocket, buffer=1024):
     server = socket(AF_INET, SOCK_STREAM) #Create server socket
     server.bind((ipAddress, portSocket)) #Bind to IP and Port
